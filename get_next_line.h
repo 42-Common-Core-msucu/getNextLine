@@ -6,7 +6,7 @@
 /*   By: msucu <msucu@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 23:48:55 by msucu             #+#    #+#             */
-/*   Updated: 2025/07/05 12:52:07 by msucu            ###   ########.fr       */
+/*   Updated: 2025/07/05 19:22:31 by msucu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ size_t	ft_strlen(const char *s);
 char	*ft_strchr(char const *s, int c);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 char	*ft_strjoin(char *s1, char const *s2);
-void	ft_reset_str(char *str, size_t n);
 
 char	*get_next_line(int fd);
 

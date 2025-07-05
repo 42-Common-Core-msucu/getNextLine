@@ -6,7 +6,7 @@
 /*   By: msucu <msucu@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 23:48:53 by msucu             #+#    #+#             */
-/*   Updated: 2025/07/05 12:54:18 by msucu            ###   ########.fr       */
+/*   Updated: 2025/07/05 19:27:23 by msucu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,12 +65,18 @@ char	*ft_strjoin(char *s1, char const *s2)
 	char	*newstr;
 
 	if (s1 == FT_NULL || s2 == FT_NULL)
+	{
+		free(s1);
 		return (FT_NULL);
+	}
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	newstr = malloc((s1_len + s2_len + 1) * sizeof(char));
 	if (newstr == FT_NULL)
+	{
+		free(s1);
 		return (FT_NULL);
+	}
 	ft_memmove(newstr, s1, s1_len);
 	ft_memmove(newstr + s1_len, s2, s2_len);
 	newstr[s1_len + s2_len] = '\0';
